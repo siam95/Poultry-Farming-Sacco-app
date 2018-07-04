@@ -3,6 +3,7 @@ package com.example.user.siam;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
@@ -18,5 +19,10 @@ public class Home extends AppCompatActivity {
         String message = intent.getStringExtra("EXTRA MESSAGE");
         TextView textView = findViewById(R.id.diplay_message);
         textView.setText(message);
+    }
+
+    public void OpenFinalActivity(View view)
+    {
+        startActivity(new Intent(this,FinalActivity.class));
     }
 }
